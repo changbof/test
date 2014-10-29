@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+    
+	function setContent(str) {
+		//replace element
+		elementPros = str.replace(/<\/?(element)[^>]*>/g,'div ')
+		str = str.replace(/(<\/?element>?)|(<\/?block>?)/g,'<div '); //去除HTML tag:element,block
+		str = str.replace(/(<\/?element>?)|(<\/?block>?)/g,'<div '); //去除HTML tag:element,block
+		return str;
+	}
+	function stripHTMLTags(str){
+		var re = /<\/?(element)([^>]*)>/g;    
+		var r = "";
+		var newStr = "";
+		while( r = re.exec(str)){
+			newStr += 
+		}
+	}
+
+
+	var htmlTag = '<block objectID="block_1" title="title类型">';
+	htmlTag += '<element style="title1">style="title1" 的效果</element>';
+	htmlTag += '<element style="title2 element">style="title2" 的效果</element>';
+	htmlTag += '<element style="title3">style="title3" 的效果</element>';
+	htmlTag += '</block>';
+
+	alert(stripHTMLTags(htmlTag));
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>
